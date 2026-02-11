@@ -97,6 +97,34 @@ Version 2.9.0 and later of `Espressif IDE <https://developer.espressif.com/blog/
 - Flash directly to the Wokwi simulator.
 - View serial monitor output in the IDE console while communicating with the simulator.
 
+Testing with idf-wokwi
+~~~~~~~~~~~~~~~~~~~~~~
+
+Wokwi provides an extension to ESP-IDF via `idf-wokwi <https://pypi.org/project/idf-wokwi/>`__ that allows for a Wokwi
+simulation to be invoked directly from ``idf.py``. This enables:
+
+- Automated unit and integration testing via CI/CD.
+- Configurable testing behavior via command-line options.
+- Hassle-free simulation without requiring configuration files.
+
+**Basic Usage**
+
+Configure the environment with a Wokwi API token, and then invoke ``idf.py wokwi`` to run a simulation.
+
+.. code-block:: bash
+   export WOKWI_CI_TOKEN="your-token-here"
+
+   # Build and simulate
+   idf.py build
+   idf.py wokwi
+
+   # CI mode: exit when expected text appears
+   idf.py wokwi --timeout 10000 --expect-text "Hello world!"
+
+
+**Related Resources**
+- `idf-wokwi Documentation <https://docs.wokwi.com/wokwi-ci/idf-wokwi-usage>`
+
 Testing with pytest-embedded
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
