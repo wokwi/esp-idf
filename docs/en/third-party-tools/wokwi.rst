@@ -109,9 +109,12 @@ simulation to be invoked directly from ``idf.py``. This enables:
 
 **Basic Usage**
 
-Configure the environment with a Wokwi API token, and then invoke ``idf.py wokwi`` to run a simulation.
+Install with ``pip install idf-wokwi``, configure the environment with a Wokwi API token,
+and then invoke ``idf.py wokwi`` to run a simulation.
 
 .. code-block:: bash
+   pip install idf-wokwi
+
    export WOKWI_CI_TOKEN="your-token-here"
 
    # Build and simulate
@@ -123,7 +126,8 @@ Configure the environment with a Wokwi API token, and then invoke ``idf.py wokwi
 
 
 **Related Resources**
-- `idf-wokwi Documentation <https://docs.wokwi.com/wokwi-ci/idf-wokwi-usage>`
+- `idf-wokwi Documentation <https://docs.wokwi.com/wokwi-ci/idf-wokwi-usage>`__
+- `Wokwi CI Dashboard <https://wokwi.com/dashboard/ci>`__ (Wokwi account required to generate API key)
 
 Testing with pytest-embedded
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
